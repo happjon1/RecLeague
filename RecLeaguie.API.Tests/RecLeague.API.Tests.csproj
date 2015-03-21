@@ -102,9 +102,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RecLeaguie.API\RecLeaguie.API.csproj">
+    <ProjectReference Include="..\RecLeaguie.API\RecLeague.API.csproj">
       <Project>{209F4DBD-5B7E-4E52-9A5D-273399A1E99A}</Project>
-      <Name>RecLeaguie.API</Name>
+      <Name>RecLeague.API</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
