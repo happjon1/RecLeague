@@ -1,7 +1,17 @@
 ﻿var recLeagueApp = angular.module('RecLeagueApp', []);
 
-recLeagueApp.controller('RecLeagueCtrl', function ($scope) {
+recLeagueApp.controller('RecLeagueCtrl', ['authenticationService',function ($scope,authenticationService) {
     var self = this;
 
-    $scope.HelloWorld = "Hello World";
-});
+    self.HelloWorld = "Hello World";
+
+    self.userInfo = {
+        Email: "",
+        Password: "",
+        ConfirmPassword:""
+    };
+
+    self.signUp = function () {
+        authenticationService.RegisterUser(self.userInfo);
+    };
+}]);

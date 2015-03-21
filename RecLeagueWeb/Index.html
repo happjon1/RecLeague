@@ -9,6 +9,19 @@
 <body>
     <div ng-controller="RecLeagueCtrl">
         {{HelloWorld}}
+
+        <div id="login">
+            Username: <input type="text" ng-model="userInfo.UserName" />
+            Password: <input type="password" ng-model="userInfo.Password" />
+        </div>
+        <button ng-click="signUp()">Sign Up</button>
+
+        {{userInfo.UserName}}<br />
+        {{userInfo.Password}}
+
     </div>
+
+
+
 </body>
 </html>

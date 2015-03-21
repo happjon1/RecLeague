@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecLeague.Web", "RecLeagueW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecLeague.Web.Tests", "RecLeagueWeb.Tests\RecLeague.Web.Tests.csproj", "{DAA872B2-67B9-427A-B170-F5773D3DA2FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecLeague.API", "RecLeaguie.API\RecLeague.API.csproj", "{209F4DBD-5B7E-4E52-9A5D-273399A1E99A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecLeague.API", "RecLeague.API\RecLeague.API.csproj", "{209F4DBD-5B7E-4E52-9A5D-273399A1E99A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecLeague.API.Tests", "RecLeaguie.API.Tests\RecLeague.API.Tests.csproj", "{4B444C7C-8EB4-468B-9840-18C124A4A6BF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecLeague.API.Tests", "RecLeague.API.Tests\RecLeague.API.Tests.csproj", "{4B444C7C-8EB4-468B-9840-18C124A4A6BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
