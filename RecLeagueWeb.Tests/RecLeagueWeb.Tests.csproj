@@ -52,9 +52,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RecLeagueWeb\RecLeagueWeb.csproj">
+    <ProjectReference Include="..\RecLeagueWeb\RecLeague.Web.csproj">
       <Project>{3F90F837-ACCE-4B84-B39F-5DC354E12899}</Project>
-      <Name>RecLeagueWeb</Name>
+      <Name>RecLeague.Web</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
