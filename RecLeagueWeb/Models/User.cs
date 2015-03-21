@@ -7,5 +7,6 @@ namespace RecLeagueWeb.Models
 {
     public class User
     {
+        //John's Comment
     }
 }
