@@ -2,20 +2,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" ng-app="RecLeagueApp">
 <head>
     <title>Rec League</title>
-    <script src="Scripts/angular.min.js"></script>
-    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/lib/angular.min.js"></script>
+    <script src="Scripts/lib/angular-route.min.js"></script>
+    <script src="Scripts/lib/angular-resource.min.js"></script>
+
     <script src="Scripts/app/home-controller.js"></script>
+    <script src="Scripts/app/authentication-service.js"></script>
+    <script src="Scripts/app/services/shared/serviceHelper.js"></script>
+
+
 </head>
 <body>
     <div ng-controller="RecLeagueCtrl">
         {{HelloWorld}}
 
         <div id="login">
-            Username: <input type="text" ng-model="userInfo.UserName" />
+            Username: <input type="text" ng-model="userInfo.Email" />
             Password: <input type="password" ng-model="userInfo.Password" />
         </div>
         <button ng-click="signUp()">Sign Up</button>
-
+        <button ng-click="getValues()">Get Value</button>
         {{userInfo.UserName}}<br />
         {{userInfo.Password}}
 

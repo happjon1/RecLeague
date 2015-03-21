@@ -1,17 +1,25 @@
-﻿var recLeagueApp = angular.module('RecLeagueApp', []);
+﻿var recLeagueApp = angular.module('RecLeagueApp', ['ngResource']);
 
-recLeagueApp.controller('RecLeagueCtrl', ['authenticationService',function ($scope,authenticationService) {
+recLeagueApp.controller('RecLeagueCtrl',['$scope','authenticationService','$http' , function ($scope,authenticationService,$http) {
     var self = this;
 
     self.HelloWorld = "Hello World";
 
-    self.userInfo = {
+    $scope.userInfo = {
         Email: "",
         Password: "",
         ConfirmPassword:""
     };
 
-    self.signUp = function () {
-        authenticationService.RegisterUser(self.userInfo);
+    $scope.signUp = function () {
+        $scope.userInfo.ConfirmPassword = $scope.userInfo.Password;
+        console.log($scope.userInfo);
+        authenticationService.RegisterUser($scope.userInfo);
     };
+
+    $scope.getValues = function () {
+        $http.get('api/values').success(function (results) {
+            console.log(results);
+        });
+    }
 }]);
