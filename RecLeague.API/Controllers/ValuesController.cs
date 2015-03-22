@@ -4,15 +4,26 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace RecLeague.API.Controllers
 {
-    public class ValuesController : ApiController
+    [EnableCors(origins: "http://localhost:63072", headers: "*", methods: "*")]
+    public class ValuesController : ApiControllerBase
     {
-        // GET api/values
-        public IEnumerable<string> Get()
+        public class TestResponse
         {
-            return new string[] { "value1", "value2" };
+            public List<string> Items { get; set; }
+            public string Name { get; set; }
+        }
+        // GET api/values
+        public HttpResponseMessage Get()
+        {
+            var newResponse = new TestResponse();
+            newResponse.Name = "testing name";
+            var item = new List<string>() { "value1", "value2" };
+            newResponse.Items = item;
+            return this.ResponseOk(newResponse);       
         }
 
         // GET api/values/5

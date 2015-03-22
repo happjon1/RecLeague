@@ -16,11 +16,13 @@ using Microsoft.Owin.Security.OAuth;
 using RecLeague.API.Models;
 using RecLeague.API.Providers;
 using RecLeague.API.Results;
+using System.Web.Http.Cors;
 
 namespace RecLeague.API.Controllers
 {
     [Authorize]
     [RoutePrefix("api/Account")]
+    [EnableCors(origins: "http://localhost:63072", headers: "*", methods: "*")]
     public class AccountController : ApiController
     {
         private const string LocalLoginProvider = "Local";

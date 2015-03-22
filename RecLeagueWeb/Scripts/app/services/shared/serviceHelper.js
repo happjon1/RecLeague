@@ -12,5 +12,9 @@
             {
                 register: { method: 'post' }
             }),
+        Values: $resource(buildUrl('api/Values/'), null,
+    {
+        GetValues: { method: 'get' }
+    }),
     };
 }]);
